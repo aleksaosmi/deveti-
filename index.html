@@ -1,57 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Amazon Bank Dashboard</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon App Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="app">
-    <header>
-      <h1>AMAZON APP</h1>
-      <div class="profile">
-        <img src="https://via.placeholder.com/40" alt="User">
-      </div>
-    </header>
+    <div class="app">
+        <header>
+            <h1>AMAZON APP</h1>
+        </header>
 
-    <!-- AMAZON BALANCE CARD -->
-    <div class="card">
-      <div class="card-header">
-        <span>Amazon Balance</span>
-      </div>
-      <div class="balance">$<span id="amazonBalance">5000</span></div>
-      <button id="addMoneyBtn" class="neon-button">Add Money</button>
+        <!-- Balans kartica -->
+        <div class="card">
+            <div class="card-header">
+                <span>Amazon Balance</span>
+            </div>
+            <div class="balance" id="balance">$0</div>
+        </div>
+
+        <!-- Dugme za dodavanje novca -->
+        <button id="addMoneyBtn">➕ Add $100</button>
+
+        <!-- Grafikon -->
+        <div class="chart-container">
+            <canvas id="myChart"></canvas>
+        </div>
+
+        <!-- Dugmad za kontrolu grafa -->
+        <div class="graph-buttons">
+            <button id="curveUpBtn">Curve Up</button>
+            <button id="curveDownBtn">Curve Down</button>
+            <button id="changeTypeBtn">Change Type</button>
+        </div>
     </div>
 
-    <!-- GRAPH SECTION -->
-    <div class="graph-section">
-      <canvas id="myChart"></canvas>
-      <div class="graph-buttons">
-        <button id="curveUpBtn" class="neon-button">CURVE UP</button>
-        <button id="curveDownBtn" class="neon-button">CURVE DOWN</button>
-        <button id="changeTypeBtn" class="neon-button">CHANGE TYPE</button>
-      </div>
-    </div>
-
-    <!-- ACTIONS SECTION -->
-    <div class="actions">
-      <button id="earnPassiveBtn">
-        <div class="icon">💸</div>
-        Passive Income
-      </button>
-      <button id="investBtn">
-        <div class="icon">📈</div>
-        Invest
-      </button>
-      <button id="loanBtn">
-        <div class="icon">🏦</div>
-        Take Loan
-      </button>
-    </div>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="script.js"></script>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Vlastiti skript -->
+    <script src="script.js"></script>
 </body>
 </html>
